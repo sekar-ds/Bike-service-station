@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login in new form</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="display">
+            <a href="file:///C:/Users/hp/Desktop/Bike%20service/Bike-service-/index.html" class="home">Home</a>
+
+        <h1>Register Account</h1>
+
+
+        <hr class="line">
+        <form class="login form" method="post" name="form" onsubmit="return myfun()">
+        <label></label><br>
+        <input type="email" placeholder="Email" name="email" value="" ><br>
+        <hr><span id="mess1" style="color:red"></span>
+        <!--<div id=" erroremail" class="pss">please fill up your Email </div>-->
+        <lable></lable><br>
+        <input type="number" placeholder="Mobile" id="number" name="number" ><br>
+        <hr>
+        <div id="number err" class="pss">please fill the mobile number</div><br>
+        <input type="password" placeholder="password" id="password" value=""><br><br>
+        <hr><div id="message" style="color:red"></div>
+        <input type="password" placeholder="Re-password" id="passwords" value=""><br><br>
+        <hr><div id="messages"></div>
+        <!--<div>Pleace enter the correct password</div>-->
+        
+        <br>
+        <input type="Submit" value="Submit" class="submit">
+
+</form>
+</div>
+</div>
+<script>
+    function myfun(){
+        var a = document.getElementById("password").value;
+        var b = document.getElementById("passwords").value;
+        var c = document.form.email.value;
+
+        if(a ==""){
+            document.getElementById("message").innerHTML="** please fill password";
+            return false;
+        }
+        
+        if(a.length < 5){
+            document.getElementById("message").innerHTML="** password lenth must be greater then 5 characters";
+            return false;
+        }
+        if(a.length > 25){
+            document.getElementById("message").innerHTML="** password lenth must be smaller then 25 characters";
+            return false;
+        }
+        if(a!=b){
+            document.getElementById("message").innerHTML="** password are not same"
+            return false;
+        }
+
+        if(c.indexof('@')<=0){
+            document.getElementById("mess1").innerHTML="**invalide @ position";
+            return false;
+        }
+        if(c.charAt(c.length-4)!='.'){
+            document.getElementById("mess1").innerHTML="*invalid . position at 4";
+            return false;
+        }
+       
+        
+    }
+
+    
+</script>
+    
+</body>
+</html>

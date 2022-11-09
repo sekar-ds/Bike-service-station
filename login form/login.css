@@ -1,0 +1,75 @@
+h1{
+    font-size: 40px;
+    color: blue;
+    margin-top: -30px;
+    text-align: center;
+    
+}
+.home{
+    float: right;
+    background-color: blue;
+    color:white;
+    text-decoration: underline;
+}
+.home:hover{
+    background-color: aqua;
+    text-decoration: underline;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    padding:30px;
+    background-color: aqua;
+    font-size: 20px;
+    
+}
+.line{
+    height: 5px;
+    background-color: black;
+}
+.container1{
+    border:1px solid black;
+    padding: 50px;
+    background-color: white;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 50px;
+    border:none;
+}
+.pss{
+    font-size: small;
+}
+.button{
+    margin-top: 10px;
+    padding: 10px;
+    color:white;
+    width: 300px;
+    border:none;
+    background-color:blue;
+    border-radius: 20px;
+
+}
+form{
+    text-align: center;
+    padding: 3px;
+}
+input{
+    padding: 8px;
+    width: 300px;
+    border:none;
+    border-radius: 20px;
+}
+input:hover{
+    background-color: aqua;
+}
+select{
+    width: 250px;
+    height: 30px;
+}
+.container,form,select,a{
+    text-decoration: none;
+    color: green;
+}
+
